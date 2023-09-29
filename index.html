@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema de Gestión de Personal</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Registro de Personal</h1>
+  <form id="registroForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="rut">RUT:</label>
+    <input type="text" id="rut" pattern="\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}" title="Formato de RUT inválido" required>
+
+    <label for="cargo">Nivel de Cargo:</label>
+    <select id="cargo" required>
+      <option value="">Seleccionar</option>
+      <option value="nuevo">Nuevo</option>
+      <option value="experiencia">Con Experiencia</option>
+    </select>
+
+    <label for="telefono">Número de Teléfono:</label>
+    <input type="tel" id="telefono" pattern="[0-9]{9}" maxlength="9" title="Formato de número inválido" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="area">Área:</label>
+    <select id="area" required>
+      <option value="">Seleccionar</option>
+      <option value="gerencia">Gerencia</option>
+      <option value="jefatura">Jefatura</option>
+      <option value="mantenimiento">Mantenimiento</option>
+      <option value="oficinista">Oficinista</option>
+    </select>
+
+    <label for="contrato">Estado del Contrato:</label>
+    <select id="contrato" required>
+      <option value="">Seleccionar</option>
+      <option value="fijo">Fijo</option>
+      <option value="plazo">A Plazo</option>
+    </select>
+
+    <label for="salario">Salario:</label>
+    <input type="number" id="salario" required>
+
+    <label for="fechaIngreso">Fecha de Ingreso:</label>
+    <input type="date" id="fechaIngreso" required>
+
+    <button type="submit">Registrar</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
